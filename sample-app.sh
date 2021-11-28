@@ -20,5 +20,5 @@ echo "CMD python /home/myapp/api_app.py" >> tempdir/Dockerfile
 
 cd tempdir
 docker build -t apiapp .
-docker run -t -d -p 5050:5050 --name apiapprunning apiapp
+docker run -t -d -p 5050:5050 --name apiapprunning --network host apiapp
 docker ps -a 
